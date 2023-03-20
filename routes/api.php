@@ -10,9 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\PictureController;
 use App\Http\Controllers\FavoriteController;
-
-
-
+use App\Http\Controllers\BlockController;
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
@@ -40,7 +38,12 @@ Route::post('/favorites', [FavoriteController::class, 'store']);
 //deleting the favorite user 
 Route::delete('/favorites/{id}', [FavoriteController::class, 'destroy']);
 
-//
+//adding block for a user
+Route::post('/blocks', [BlockController::class, 'addBlock']);
+
+//removing the block for the user
+Route::delete('/blocks', [BlockController::class, 'removeBlock']);
+
 
 
 
