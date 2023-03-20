@@ -22,6 +22,10 @@ Route::post('/profile/update', [ProfilepageController::class, 'update']);
 //filtering the users acccording to their gender
 Route::get('/registrations',[UserController::class,'index']);
 
+//route to let the user handle the opposite gender
+Route::get('/opposite-gender', [GenderController::class, 'oppositeGender']);
+
+
 
 
 
