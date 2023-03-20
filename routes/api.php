@@ -7,6 +7,8 @@ use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ProfilepageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GenderController;
+
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
