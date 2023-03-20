@@ -8,6 +8,8 @@ use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ProfilepageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GenderController;
+use App\Http\Controllers\PictureController;
+
 
 
 Route::post('login', [AuthController::class, 'login']);
@@ -26,6 +28,10 @@ Route::get('/registrations',[UserController::class,'index']);
 
 //route to let the user handle the opposite gender
 Route::get('/opposite-gender', [GenderController::class, 'oppositeGender']);
+
+//Storing the picture in the picturestable:
+Route::post('/pictures', [PictureController::class, 'store']);
+
 
 
 
