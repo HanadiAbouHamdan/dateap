@@ -9,6 +9,8 @@ use App\Http\Controllers\ProfilepageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\PictureController;
+use App\Http\Controllers\FavoriteController;
+
 
 
 
@@ -31,6 +33,14 @@ Route::get('/opposite-gender', [GenderController::class, 'oppositeGender']);
 
 //Storing the picture in the picturestable:
 Route::post('/pictures', [PictureController::class, 'store']);
+
+//storing the favorite user id 
+Route::post('/favorites', [FavoriteController::class, 'store']);
+
+//deleting the favorite user 
+Route::delete('/favorites/{id}', [FavoriteController::class, 'destroy']);
+
+//
 
 
 
