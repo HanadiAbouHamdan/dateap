@@ -11,6 +11,9 @@ use App\Http\Controllers\GenderController;
 use App\Http\Controllers\PictureController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\BlockController;
+use App\Http\Controllers\MessageController;
+
+
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
@@ -43,6 +46,10 @@ Route::post('/blocks', [BlockController::class, 'addBlock']);
 
 //removing the block for the user
 Route::delete('/blocks', [BlockController::class, 'removeBlock']);
+
+//Route for sending messages
+Route::post('/messages', [MessageController::class, 'sendMessage']);
+
 
 
 
