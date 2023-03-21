@@ -50,6 +50,12 @@ Route::delete('/blocks', [BlockController::class, 'removeBlock']);
 //Route for sending messages
 Route::post('/messages', [MessageController::class, 'sendMessage']);
 
+//route for reading the message 
+Route::get('/inbox', [MessageController::class, 'inbox']);
+
+//route for replying on a message 
+Route::post('/inbox/{message}', [MessageController::class, 'reply']);
+
 
 
 
